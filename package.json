@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "name": "roadhouse-mock",
+  "description": "A set of factories to create simple mock handlers for CRUD data in Angular",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vokal/roadhouse-mock.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vokal/roadhouse-mock/issues"
+  },
+  "homepage": "https://github.com/vokal/roadhouse-mock",
+  "keywords": [
+      "mock",
+      "angular"
+  ]
+}
