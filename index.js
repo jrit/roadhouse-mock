@@ -69,12 +69,16 @@ rhMock.createList = function ( list )
 
         var data = angular.copy( list );
 
-        Object.keys( params ).forEach( key => {
+        Object.keys( params ).forEach( function ( key )
+        {
             if( rhMock.skipQueriesInList.indexOf( key ) !== -1 || key === rhMock.apiPort )
             {
                 return;
             }
-            data = data.filter( item => item[ key ] && item[ key ].toString() === params[ key ].toString() );
+            data = data.filter( function ( item )
+            {
+                return item[ key ] && item[ key ].toString() === params[ key ].toString();
+            } );
         } );
 
         var dataPage = data.slice( skip, skip + take );
