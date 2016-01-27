@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "roadhouse-mock",
   "description": "A set of factories to create simple mock handlers for CRUD data in Angular",
   "license": "MIT",
