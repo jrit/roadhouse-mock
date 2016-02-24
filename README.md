@@ -75,3 +75,19 @@ angular.module( "App" ).requires.push( "e2e-mocks" );
 ] );
 angular.module( "App" ).requires.push( "e2e-mocks" );
 ```
+
+## Additional Options
+
+### *skipQueriesInList*, default `[ "skip", "take", "offset", "limit", "page", "rhcurrentpage", "search" ]`
+
+An array of params that will be ignored when filtering paged responses.
+
+
+### *skipParamName*, default `"skip"`
+
+The parameter that the paged response will use to skip a number of items from the available list.
+
+
+### *takeParamName*, default `"take"`
+
+The parameter that the paged response will use to take a number of items from the available list.
