@@ -3,7 +3,9 @@
 var rhMock = {};
 module.exports = rhMock;
 
-rhMock.skipQueriesInList = [ "skip", "take", "rhcurrentpage", "search" ];
+rhMock.skipQueriesInList = [ "skip", "take", "offset", "limit", "page", "rhcurrentpage", "search" ];
+rhMock.skipParamName = "skip";
+rhMock.takeParamName = "take";
 
 var apiRoot = "";
 
@@ -63,8 +65,8 @@ rhMock.createList = function ( list )
 {
     return function ( method, url, requestData, headers, params )
     {
-        var skip = Number( params.skip ) || 0;
-        var take = Number( params.take ) || 1000;
+        var skip = Number( params[ rhMock.skipParamName ] ) || 0;
+        var take = Number( params[ rhMock.takeParamName ] ) || 1000;
         var page = Number( skip / take + 1 ) || 1;
 
         var data = angular.copy( list );
